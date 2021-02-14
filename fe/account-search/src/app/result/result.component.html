@@ -1,0 +1,3 @@
+<div>
+    <as-table [headers]="headers" [page]="page" [onRowClick]="onSelect.bind(this)" (pagingParams)="refresh($event)"></as-table>
+</div>

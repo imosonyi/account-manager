@@ -1,0 +1,15 @@
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th *ngFor="let header of headers">{{header.value}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of page.content" (click)="onRowClick(row)">
+                <td *ngFor="let header of headers">{{row[header.key]}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<as-table-footer [page]="page"></as-table-footer>

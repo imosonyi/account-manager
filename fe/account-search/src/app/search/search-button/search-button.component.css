@@ -1,0 +1,12 @@
+img {
+    width: 3%;
+    margin-left: 2%;
+    display: inline-block;
+    vertical-align: middle;
+    opacity: .5;
+}
+
+img:hover {
+    opacity: 1;
+    cursor: pointer;
+}

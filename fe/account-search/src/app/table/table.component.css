@@ -1,0 +1,39 @@
+div {
+    height: 500px;
+    overflow: auto;
+}
+
+table, tr, th, td {
+    border: 0;
+    border-spacing: 0;
+    color: #FFFFFF;
+}
+
+table {
+    width: 100%;
+}
+
+tr {
+    height: 40px;
+    line-height: 40px;
+}
+
+th {
+    border-bottom: 1px solid #FFFFFF;
+}
+
+td {
+    text-align: center;
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: #585858;
+}
+
+tbody tr:hover {
+    cursor: pointer;
+}
+
+tbody tr:hover {
+    background-color: #656565;
+}

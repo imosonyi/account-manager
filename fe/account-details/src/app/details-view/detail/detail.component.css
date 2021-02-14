@@ -1,0 +1,23 @@
+span {
+    display: inline-block;
+    height: 50px;
+    width: 50%;
+    padding: 0 30px;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+div:hover {
+    background-color: #454545;
+}
+
+.label {
+    text-align: right;
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+
+.value {
+    text-align: left;
+    color: #FFFFFF;
+}

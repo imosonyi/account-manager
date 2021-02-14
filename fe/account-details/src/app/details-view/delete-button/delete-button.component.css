@@ -1,0 +1,16 @@
+div {
+    display: inline-block;
+    background-color: #FF7777;
+    height: 50px;
+    width: 50px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #FF2222;
+    margin: 50px;
+}
+
+div:hover {
+    background-color: #FF2222;
+    border: 2px solid #FF7777;
+    cursor: pointer;
+}

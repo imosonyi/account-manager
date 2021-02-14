@@ -1,0 +1,78 @@
+form {
+    width: 40%;
+    margin: 50px auto;
+}
+
+label, input, select {
+    display: inline-block;
+    height: 50px;
+    width: 50%;
+    padding: 0 30px;
+    line-height: 50px;
+    font-size: 15px;
+}
+
+input, select {
+    background-color: #505050;
+    color: #FFFFFF;
+    outline: 0;
+    border: 0;
+}
+
+.invalid {
+    border-bottom: 1px solid #FF2222;
+}
+
+.valid {
+    border-bottom: 1px solid #22FF22;
+}
+
+div:hover {
+    background-color: #454545;
+}
+
+label {
+    text-align: right;
+    color: #DDDDDD;
+    text-decoration: underline;
+}
+
+#cancelButton {
+    display: inline-block;
+    background-color: #FF7777;
+    height: 50px;
+    width: 50px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #FF2222;
+    margin: 50px;
+}
+
+#cancelButton:hover {
+    background-color: #FF2222;
+    border: 2px solid #FF7777;
+    cursor: pointer;
+}
+
+#saveButton {
+    background-color: #77FF77;
+    height: 50px;
+    width: 50px;
+    padding: 7px;
+    border-radius: 5px;
+    border: 2px solid #22FF22;
+    float: right;
+    margin: 50px;
+}
+
+#saveButton:hover {
+    background-color: #22FF22;
+    border: 2px solid #77FF77;
+    cursor: pointer;
+}
+
+#saveButton[disabled] {
+    background-color: #AAAAAA;
+    border: 2px solid #CCCCCC;
+    cursor: unset;
+}

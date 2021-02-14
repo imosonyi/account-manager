@@ -1,0 +1,69 @@
+version: "3.8"
+
+services:
+  mongo-account-manager:
+    container_name: mongo-account-manager
+    build:
+      context: ./db/
+    volumes:
+      - data-account-manager:/data/db
+    networks:
+      - network-account-manager
+    ports:
+      - 27017:27017
+  account-manager:
+    container_name: account-manager
+    build:
+      context: ./be/
+    networks:
+      - network-account-manager
+    depends_on:
+      - mongo-account-manager
+    environment:
+      - WAIT_HOSTS_TIMEOUT=300
+      - WAIT_SLEEP_INTERVAL=5
+      - WAIT_HOST_CONNECT_TIMEOUT=5
+      - WAIT_HOSTS=mongo-account-manager:27017
+    ports:
+      - 8080:8080
+  root-config:
+    container_name: root-config
+    build:
+      context: ./fe/root-config/
+    networks:
+      - network-account-manager
+    ports:
+      - 80:80
+  navbar:
+    container_name: navbar
+    build:
+      context: ./fe/navbar/
+    networks:
+      - network-account-manager
+    ports:
+      - 4200:80
+  account-search:
+    container_name: account-search
+    build:
+      context: ./fe/account-search/
+    networks:
+      - network-account-manager
+    ports:
+      - 4201:80
+  account-details:
+    container_name: account-details
+    build:
+      context: ./fe/account-details/
+    networks:
+      - network-account-manager
+    ports:
+      - 4202:80
+
+volumes:
+  data-account-manager:
+    name: data-account-manager
+
+networks:
+  network-account-manager:
+    name: network-account-manager
+    driver: bridge

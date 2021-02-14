@@ -1,0 +1,15 @@
+input {
+    width: 95%;
+    border: 0;
+    border-bottom: 2px solid #AAAAAA;
+    outline: 0;
+    font-size: 20px;
+    color: #FFFFFF;
+    padding: 7px 0;
+    background: transparent;
+    display: inline-block;
+}
+
+input:focus {
+    border-bottom: 2px solid #FFFFFF;
+}

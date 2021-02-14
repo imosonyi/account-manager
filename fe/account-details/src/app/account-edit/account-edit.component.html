@@ -1,0 +1,32 @@
+<form #accountEditForm="ngForm" (ngSubmit)="save()">
+    <div>
+        <label for="firstname">Firstname</label>
+        <input id="firstname" name="firstname" [(ngModel)]="request.firstname" [ngClass]="request.firstname ? 'valid' : 'invalid'" required>
+    </div>
+    <div>
+        <label for="lastname">Lastname</label>
+        <input id="lastname" name="lastname" [(ngModel)]="request.lastname" [ngClass]="request.lastname ? 'valid' : 'invalid'" required>
+    </div>
+    <div>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" [(ngModel)]="request.email" [ngClass]="request.email ? 'valid' : 'invalid'" required>
+    </div>
+    <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" [(ngModel)]="request.phone" [ngClass]="request.phone ? 'valid' : 'invalid'" required>
+    </div>
+    <div>
+        <label for="status">Status</label>
+        <select id="status" name="status" [(ngModel)]="request.status" required>
+            <option *ngFor="let status of statuses" [value]="status">{{status}}</option>
+        </select>
+    </div>
+    <span>
+        <button id="cancelButton" type="button" (click)="cancel()">
+            <img [src]="cancelIconUrl">
+        </button>
+        <button id="saveButton" type="submit" [disabled]="!accountEditForm.form.valid">
+            <img [src]="saveIconUrl">
+        </button>
+    </span>
+</form>
